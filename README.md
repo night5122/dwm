@@ -24,7 +24,9 @@ patch < Example.diff
 
 ## How do I create patches?
 
-```diff -u Original.c Updated.c > Patch.diff```
+```
+diff -u Original.c Updated.c > Patch.diff
+```
 
 # Contact
 
