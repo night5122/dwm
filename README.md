@@ -1,8 +1,6 @@
 # Desktop Window Manager
 
-A patched and minimized version of the Desktop Window Manager. Currently, it is still in development but highly usable. I recommend using Desktop Menu along with this fork. 
- 
-Feel free to make pull requests.
+A patched and minimized version of the Desktop Window Manager.
 
 # Instructions
 
