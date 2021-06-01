@@ -26,6 +26,10 @@ patch < Example.diff
 diff -u Original.c Updated.c > Patch.diff
 ```
 
+# License
+
+This software was originally created by the Suckless developers. I personally do not care what you do with this fork.
+
 # Contact
 
 If you have any inquires about this project, please contact me. I would love to hear from you!
