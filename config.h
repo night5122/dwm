@@ -15,20 +15,20 @@ static const int showbar              = 1;
 static const int topbar               = 1; 
 static const char *fonts[]            = { "Source Sans Pro:size=10", "JetBrains Mono Nerd Font:size=12" };
 static const char dmenufont[]         = { "Source Sans Pro:size=10" };
-static const char col_1[]             = "#282c34"; 
-static const char col_2[]             = "#282c34"; 
+static const char col_1[]             = "#282828"; 
+static const char col_2[]             = "#282828";
 static const char col_3[]             = "#d7d7d7";
-static const char col_4[]             = "#282c34"; 
+static const char col_4[]             = "#323232"; 
 static const unsigned int baralpha    = 0xa0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]        = {[SchemeNorm]={col_3,col_1,col_2},[SchemeSel]={ col_3,col_4,col_4},};
 static const unsigned int alphas[][3] = {[SchemeNorm]={OPAQUE,baralpha,borderalpha},[SchemeSel]={OPAQUE,baralpha,borderalpha },};
-static const char *tags[]             = {"","","","",""}; 
+static const char *tags[]             = {"1","2","3","4","5"}; 
 static const Rule rules[]             = {NULL};
 static const float mfact              = 0.55; 
 static const int nmaster              = 1;    
 static const int resizehints          = 1;    
-static const Layout layouts[]         = {{"     Tiling",tile },};
+static const Layout layouts[]         = {{"",tile },};
 
 /*
  
@@ -51,8 +51,8 @@ static const Layout layouts[]         = {{"     Tiling",tile },};
 */
 
 static char dmenumon[2]               = "0"; 
-static const char *dmenucmd[]         = {"dmenu_run","-m", dmenumon,"-fn", dmenufont,"-nb",col_1,"-nf",col_3,"-sb", col_4,"-sf",col_4,NULL};
-static const char *termcmd[]          = {"st",NULL};
+static const char *dmenucmd[]         = {"rofi", "-show", "run",NULL};
+static const char *termcmd[]          = {"alacritty",NULL};
 
 /*
 
@@ -61,8 +61,8 @@ static const char *termcmd[]          = {"st",NULL};
 */
 
 static Key keys[] = {
-	{ MODKEY,                       XK_Return, spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ 0,                       XK_Super_L, spawn,          {.v = dmenucmd } },
+	{ 0,                            XK_Control_R, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
